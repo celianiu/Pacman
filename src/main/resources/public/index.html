@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/pacmanElement.css"/>
+    <script src="js/view.js"></script>
+    <script src="js/loadImg.js"></script>
+    <script src="js/gameParam.js"></script>
+    <!--    font awsome-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/662850b1ab.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div>
+    <main id="landing-page">
+        <button class="rotate" id="go-back-btn" style="background: transparent; color:white; width: 60px; display: block;">
+            <span><i class="fas fa-2x fa-angle-double-left"></i></span>
+        </button>
+
+        <!--        <button style ="background: green;"><span id="game-status">Resume</span></button>-->
+        <div id = "before-game-page">
+            <div class="screen rotate">
+                <h1 style="color:lightgrey; margin-top: 30vh;">PACMAN <span>
+            <img style="width: 60px; height: 50px;" src="https://i.ytimg.com/vi/9n-kabQP9M4/hqdefault.jpg">
+            </span></h1>
+                <button style="margin-top: 50vh; position: absolute; height: 80px" id="new-game-button">New Game</button>
+            </div>
+
+            <div class="screen rotate">
+                <h1 style="color:lightgrey; margin-top: 15vh;">CHOOSE DIFFICULTY</h1>
+                <button style="margin-top: 30vh; position: absolute; height: 80px" id="level-button-1">Level 1</button>
+                <button style="margin-top: 48vh; position: absolute; height: 80px" id="level-button-2">Level 2</button>
+            </div>
+            <div class="screen rotate">
+                <h1 style="color:lightgrey; margin-top: 15vh;">HOW MANY GHOST</h1>
+                <button id="ghost-num-1" type="number" style=" margin-top: 25vh; position: absolute; height: 80px">1
+                </button>
+                <button id="ghost-num-2" type="number" style=" margin-top: 40vh; position: absolute; height: 80px">2 </button>
+                <button id="ghost-num-3" type="number" style=" margin-top: 55vh; position: absolute; height: 80px">3 </button>
+                <button id="ghost-num-4" type="number" style=" margin-top: 70vh; position: absolute; height: 80px">4 </button>
+                <!--            <button type="number" style=" margin-top: 75vh; position: absolute; height: 80px">4 </button>-->
+                <!--            <button style="margin-top: 55vh; position: absolute; height: 80px" id="level-button-2">Level 2</button>-->
+            </div>
+
+
+
+        </div>
+        <!--        <button>Option</button>-->
+        <!--        <select> LEVEL-->
+        <!--            <option>LEVEL 1</option>-->
+        <!--        </select>-->
+    </main>
+    <div id="game-page" class="game-board" width="100%">
+        <div class = "score-board">
+            <h3 style="padding-right: 5%; padding-left: 10%; align-content: center" >Life: </h3>
+            <div id="pacman-life" style="display: contents">
+<!--                <img class="heart" src="asset/heart.png" width="45px" height="45px">-->
+<!--                <img class="heart" src="asset/heart.png" width="45px" height="45px">-->
+<!--                <img class="heart" src="asset/heart.png" width="45px" height="45px">-->
+            </div>
+            <h3 style="padding-right: 10%">Score: </h3><h3 id="cur-score">0</h3>
+<!--            <h3 style="padding-left: 15%">Highest: </h3><h3 id="highest-score">0</h3>-->
+        </div>
+        <div id="breathing-ntf">Press Any Key to Start</div>
+        <div  style="position: relative">
+            <div class="hover_div" style="position:absolute;!important; width: 100%; display:block;z-index:9999">
+                <img id="gameover-image" class="some_class" src="./asset/gameover.png" style="display: block; width: 400px; height: 200px; margin-left: 80%; margin-top: 30%" >
+                <img id="gamewin-image" src="./asset/pngwing.com.png" style="width: 600px; height: 400px; margin-left: 80%; margin-top: 30%" >
+
+                <div id="gameover-restart" class="breathing-ntf" style="align-content: center; position:absolute;!important; margin-left: 85%;margin-top: 10%; font-size: xx-large"> Restart</div>
+            </div>
+            <canvas style="position: absolute;" width="1300" height="650" id="canvas"></canvas>
+        </div>
+    </div>
+
+</div>
+</body>
